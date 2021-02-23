@@ -1,0 +1,38 @@
+{
+  "name": "login_app",
+  "version": "1.0.0",
+  "description": "Login App with Node JS and mySQL for registering a user and login authentication of a user.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/einbulinda/login_app.git"
+  },
+  "keywords": [
+    "Node",
+    "JS",
+    "mySQL",
+    "Login",
+    "User",
+    "Authentication",
+    "Register",
+    "Institute",
+    "of",
+    "Software",
+    "Technology",
+    "IST"
+  ],
+  "author": "Einstein Bulinda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/einbulinda/login_app/issues"
+  },
+  "homepage": "https://github.com/einbulinda/login_app#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}
