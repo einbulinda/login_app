@@ -1,0 +1,11 @@
+nav{
+    background: purple;
+    padding: 5px;
+}
+li.nav-item a{
+    color: white;
+    text-transform: uppercase;
+}
+li.nav-item a:hover{
+    color: cyan;    
+}
