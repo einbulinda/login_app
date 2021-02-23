@@ -1,11 +1,28 @@
-nav{
-    background: purple;
-    padding: 5px;
+nav {
+  background: purple;
+  padding: 5px;
 }
-li.nav-item a{
-    color: white;
-    text-transform: uppercase;
+li.nav-item a {
+  color: white;
+  text-transform: uppercase;
 }
-li.nav-item a:hover{
-    color: cyan;    
+li.nav-item a:hover {
+  color: cyan;
+}
+body {
+  background: rgb(182, 181, 181);
+}
+/* Form Styling */
+.form-container {
+  border: 1px solid white;
+  border-radius: 8px;
+  box-sizing: border-box;
+  box-shadow: 14px 14px 20px #e6e8e9, -14px -14px 20px #f5f5f5;
+}
+button.btn-custom {
+  background: purple;
+  color: white;
+}
+button.btn-custom:hover {
+  color: cyan;
 }
