@@ -7,3 +7,4 @@ Steps and Procedures:
 3. Create app.js and create a server for the app, defining port for express to listen to and serve files
 4. Install nodemon - restarting server when changes are made automatically.
 5. Provide  a start script in package.json to be executed when npm start is called from terminal.
+6. Install ejs templating engine for injecting data in html
