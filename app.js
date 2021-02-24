@@ -39,6 +39,10 @@ app.get("/register", (req, res) => {
   res.render("register");
 });
 
+app.get("/signin", (req, res) => {
+  res.render("signin");
+});
+
 const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port: ${PORT}`);
