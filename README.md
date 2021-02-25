@@ -12,3 +12,8 @@ Steps and Procedures:
 6. Install ejs templating engine for injecting data in html
 7. Designing the registration page
 8. Designing login page
+9. create connection to the server
+10. Store server login credentials in a dotenv file
+11. Authentication of form details. Does email exist in DB, avoid duplicate users
+12. hash the password before storing in DB for security reasons. using bcrypt
+13. login form routes   

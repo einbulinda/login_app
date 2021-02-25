@@ -1,6 +1,8 @@
-var express = require("express");
-var ejs = require("ejs");
-var mysql = require("mysql");
+const express = require("express");
+const mysql = require("mysql");
+const hbs = require("hbs");
+const path = require("path");
+
 const dotenv = require("dotenv");
 
 // Creating a server with express module.
@@ -8,11 +10,21 @@ var app = express();
 
 dotenv.config({ path: "./.env" });
 
-// set view engine to ejs
-app.set("view engine", "ejs");
+// register partials
+hbs.registerPartials(__dirname + "/views/partials");
+
+// view engine setup
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "hbs");
 
 // Serving static files for website
 app.use(express.static("public"));
+
+// getting url encoded bodies sent by HTML Forms
+app.use(express.urlencoded({ extended: false }));
+
+// Parse JSON bodies (sent by API clients)
+app.use(express.json());
 
 // DB Connection details
 const db = mysql.createConnection({
@@ -31,17 +43,11 @@ db.connect((error) => {
   }
 });
 
-app.get("/", (req, res) => {
-  res.render("index");
-});
-
-app.get("/register", (req, res) => {
-  res.render("register");
-});
-
-app.get("/signin", (req, res) => {
-  res.render("signin");
-});
+// Defining Routes
+app.use("/", require("./routes/pages"));
+app.use("/register", require("./routes/pages"));
+app.use("/signin", require("./routes/pages"));
+app.use("/auth", require("./routes/auth"));
 
 const PORT = 3000;
 app.listen(PORT, () => {
