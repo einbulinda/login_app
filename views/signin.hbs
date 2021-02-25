@@ -24,7 +24,7 @@
             <label for="email" class="col-form-label">Email</label>
           </div>
           <div class="col-sm-7">
-            <input type="email" id="email" class="form-control" />
+            <input type="email" id="email" name="email" class="form-control" />
           </div>
         </div>
         <div class="row g-3 align-items-center">
@@ -32,13 +32,19 @@
             <label for="password" class="col-form-label">Password</label>
           </div>
           <div class="col-sm-7">
-            <input type="password" id="password" class="form-control" />
+            <input type="password" name="password" id="password" class="form-control" />
           </div>
         </div>
         <button type="submit" class="btn btn-custom my-3 d-block mx-auto">
           Sign In
         </button>
       </form>
+
+      {{#if message}}
+      <p class="text-center alert alert-danger">
+        <i>{{message}}</i>
+      </p>
+      {{/if}}
     </div>
   </main>
   <script src="/main.js"></script>

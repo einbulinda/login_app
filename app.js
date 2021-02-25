@@ -2,6 +2,7 @@ const express = require("express");
 const mysql = require("mysql");
 const hbs = require("hbs");
 const path = require("path");
+const cookieParser = require("cookie-parser");
 
 const dotenv = require("dotenv");
 
@@ -25,6 +26,9 @@ app.use(express.urlencoded({ extended: false }));
 
 // Parse JSON bodies (sent by API clients)
 app.use(express.json());
+
+// initializing cookie to use them in browser
+app.use(cookieParser());
 
 // DB Connection details
 const db = mysql.createConnection({
